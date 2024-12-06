@@ -50,7 +50,7 @@ class MahasiswaController extends Controller
     ]);
 
     Mahasiswa::create($validasiData);
-    return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa Berhasil Ditambahkan!');
+    return redirect()->route('mahasiswa.index')->with('success', 'Data Mahasiswa Berhasil Ditambahkan!');
     }
 
 
@@ -96,7 +96,7 @@ class MahasiswaController extends Controller
     ]);
 
     $mahasiswa->update($validasiData);
-    return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa Berhasil Diperbarui!');
+    return redirect()->route('mahasiswa.index')->with('success', 'Data Mahasiswa Berhasil Diperbarui!');
     }
 
 
@@ -108,6 +108,6 @@ class MahasiswaController extends Controller
     public function destroy(Mahasiswa $mahasiswa)
     {
         $mahasiswa->delete();
-        return redirect()->route('mahasiswa.index')->with('success', 'Data Mahasiswa berhasil dihapus!');
+        return redirect()->route('mahasiswa.index')->with('success', 'Data Mahasiswa Berhasil Dihapus!');
     }
 }

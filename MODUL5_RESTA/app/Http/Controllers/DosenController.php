@@ -51,7 +51,7 @@ class DosenController extends Controller
     Dosen::create($validasiData);
 
     // Redirect ke halaman daftar dosen dengan pesan sukses
-    return redirect()->route('dosen.index')->with('success', 'Dosen Berhasil Ditambahkan!');
+    return redirect()->route('dosen.index')->with('success', 'Data Dosen Berhasil Ditambahkan!');
 }
 
 

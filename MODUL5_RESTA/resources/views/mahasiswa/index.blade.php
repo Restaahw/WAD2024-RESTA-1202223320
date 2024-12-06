@@ -1,19 +1,24 @@
 @extends('layouts.app')
 
+@section('title', 'Daftar Mahasiswa')
+
 @section('content')
-<div class="container mt-5">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h1>Daftar Mahasiswa</h1>
-        <a href="{{ route('mahasiswa.create') }}" class="btn btn-primary">Tambah Mahasiswa</a>
-    </div>
+<div class="container mt-4">
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+    <h1>Daftar Mahasiswa</h1>
+    <a href="{{ route('mahasiswa.create') }}" class="btn btn-primary mb-3">Tambah Mahasiswa</a>
     <table class="table table-striped">
-        <thead class="table-dark">
+        <thead>
             <tr>
                 <th>No</th>
                 <th>NIM</th>
                 <th>Nama</th>
                 <th>Jurusan</th>
-                <th>Dosen Wali</th>
+                <th>mahasiswa Wali</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -24,7 +29,7 @@
                 <td>{{ $mahasiswa->nim }}</td>
                 <td>{{ $mahasiswa->nama_mahasiswa }}</td>
                 <td>{{ $mahasiswa->jurusan }}</td>
-                <td>{{ $mahasiswa->dosen->nama_dosen }}</td>
+                <td>{{ $mahasiswa->kode_dosen }}</td>
                 <td>
                     <a href="{{ route('mahasiswa.show', $mahasiswa->id) }}" class="btn btn-info btn-sm">Detail</a>
                     <a href="{{ route('mahasiswa.edit', $mahasiswa->id) }}" class="btn btn-warning btn-sm">Edit</a>

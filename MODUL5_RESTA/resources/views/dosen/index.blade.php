@@ -4,6 +4,11 @@
 
 @section('content')
 <div class="container mt-4">
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
     <h1>Daftar Dosen</h1>
     <a href="{{ route('dosen.create') }}" class="btn btn-primary mb-3">Tambah Dosen</a>
     <table class="table table-striped">

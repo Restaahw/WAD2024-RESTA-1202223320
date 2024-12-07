@@ -18,7 +18,6 @@
                 <th>NIM</th>
                 <th>Nama Mahasiswa</th>
                 <th>Jurusan</th>
-                <th>mahasiswa Wali</th>
                 <th>Aksi</th>
             </tr>
         </thead>

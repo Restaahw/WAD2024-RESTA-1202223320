@@ -16,7 +16,7 @@
             <tr>
                 <th>No</th>
                 <th>Kode Dosen</th>
-                <th>Nama</th>
+                <th>Nama Dosen</th>
                 <th>Email</th>
                 <th>No. Telepon</th>
                 <th>Aksi</th>
